@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+{% block title %}
+Home - My Django App
+{% endblock %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+
+        <!-- Username input -->
+        <div data-mdb-input-init class="form-outline mb-4">
+            {{ form.username|add_class:"form-control" }}
+            <label class="form-label" for="form2Example1">Username</label>
+            
+          </div>
+        
+    <!-- Email input -->
+    <div data-mdb-input-init class="form-outline mb-4">
+    {{ form.email|add_class:"form-control" }}
+      <label class="form-label" for="form2Example1">Email address</label>
+      
+    </div>
+  
+    <!-- Password input -->
+    <div data-mdb-input-init class="form-outline mb-4">
+        {{ form.password|add_class:"form-control" }}
+      <label class="form-label" for="form2Example2">Password</label>
+
+    </div>
+
+  
+    <!-- Submit button -->
+    <button  type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">Register</button>
+
+  </form>
+  
+  {% endblock %}

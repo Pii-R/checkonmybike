@@ -1,0 +1,16 @@
+<!-- profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ profile.user.username }}'s Profile</title>
+</head>
+<body>
+    <h1>{{ profile.user.username }}'s Profile</h1>
+    {% if profile.qr_code_image %}
+    <p>Here is your profile QR code:</p>
+    <img src="{{ profile.qr_code_image.url }}" alt="QR Code">
+    {% endif %}
+</body>
+</html>
